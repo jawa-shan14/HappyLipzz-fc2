@@ -4,19 +4,19 @@ export const GallerySection: React.FC = () => {
     const beforeAfterPairs = [
         {
             beforeSrc: '/teeth-1.jpeg',
-            afterSrc: '/ba-1.jpeg',
+            afterSrc: '/ba-1.png',
             alt: 'Dental Care Result 1',
             title: 'Before & After'
         },
         {
             beforeSrc: '/teeth-2.jpeg',
-            afterSrc: '/ba-2.jpeg',
+            afterSrc: '/ba-2.png',
             alt: 'Dental Care Result 2',
             title: 'Smile Makeover'
         },
         {
             beforeSrc: '/teeth-3.jpeg',
-            afterSrc: '/ba-3.jpeg',
+            afterSrc: '/ba-3.png',
             alt: 'Dental Care Result 3',
             title: 'Clinical Results'
         }

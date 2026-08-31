@@ -1,22 +1,19 @@
 import React from 'react';
 
 export const GallerySection: React.FC = () => {
-    const beforeAfterPairs = [
+    const beforeAfterImages = [
         {
-            beforeSrc: '/teeth-1.jpeg',
-            afterSrc: '/ba-1.png',
+            src: '/ba-1.png',
             alt: 'Dental Care Result 1',
             title: 'Before & After'
         },
         {
-            beforeSrc: '/teeth-2.jpeg',
-            afterSrc: '/ba-2.png',
+            src: '/ba-2.png',
             alt: 'Dental Care Result 2',
             title: 'Smile Makeover'
         },
         {
-            beforeSrc: '/teeth-3.jpeg',
-            afterSrc: '/ba-3.png',
+            src: '/ba-3.png',
             alt: 'Dental Care Result 3',
             title: 'Clinical Results'
         }
@@ -39,39 +36,18 @@ export const GallerySection: React.FC = () => {
                 </div>
 
                 {/* Before & After Grid */}
-                <div className="flex flex-col gap-6 sm:gap-8 max-w-2xl mx-auto">
-                    {beforeAfterPairs.map((pair, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                    {beforeAfterImages.map((img, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-3xl overflow-hidden shadow-lg border border-purple-100/80 hover:shadow-xl transition-all duration-300"
+                            className="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100/80 hover:shadow-lg transition-all duration-300"
                         >
-                            {/* Title */}
-                            <div className="bg-gradient-to-r from-[#6B21A8] to-[#7C3AED] px-6 py-4">
-                                <h3 className="text-white font-bold text-lg text-center">{pair.title}</h3>
-                            </div>
-                            
-                            {/* Before Image */}
+                            {/* Image */}
                             <div className="relative">
-                                <div className="absolute top-3 left-3 bg-[#6B21A8] text-white text-xs font-bold px-3 py-1 rounded-full z-10">
-                                    BEFORE
-                                </div>
                                 <img
-                                    src={pair.beforeSrc}
-                                    alt={`${pair.alt} - Before`}
-                                    className="w-full h-48 object-cover"
-                                    loading="lazy"
-                                />
-                            </div>
-                            
-                            {/* After Image */}
-                            <div className="relative">
-                                <div className="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
-                                    AFTER
-                                </div>
-                                <img
-                                    src={pair.afterSrc}
-                                    alt={`${pair.alt} - After`}
-                                    className="w-full h-48 object-cover"
+                                    src={img.src}
+                                    alt={img.alt}
+                                    className="w-full h-auto object-cover"
                                     loading="lazy"
                                 />
                             </div>

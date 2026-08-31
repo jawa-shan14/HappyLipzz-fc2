@@ -3,19 +3,16 @@ import React from 'react';
 export const GallerySection: React.FC = () => {
     const beforeAfterImages = [
         {
-            src: '/ba-1.png',
-            alt: 'Dental Care Result 1',
-            title: 'Before & After'
+            src: '/ba-1.jpg',
+            alt: 'Dental Care Result 1'
         },
         {
-            src: '/ba-2.png',
-            alt: 'Dental Care Result 2',
-            title: 'Smile Makeover'
+            src: '/ba-2.jpeg',
+            alt: 'Dental Care Result 2'
         },
         {
-            src: '/ba-3.png',
-            alt: 'Dental Care Result 3',
-            title: 'Clinical Results'
+            src: '/ba-3.jpg',
+            alt: 'Dental Care Result 3'
         }
     ];
 

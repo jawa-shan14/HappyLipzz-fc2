@@ -69,18 +69,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </button>
             </div>
 
-            {/* Social Proof Badges */}
-            <div className="mt-[2px] flex items-center gap-3 lg:translate-x-[-8px]">
-              <div className="inline-flex items-center gap-2 rounded-2xl bg-white/90 border border-purple-100/80 shadow-sm px-3 py-2 min-h-[58px] translate-y-1">
-                <div className="flex items-center justify-center rounded-full bg-[#F8E7C8] h-8 w-8 shrink-0">
-                  <Star className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
-                </div>
-                <div className="flex flex-col leading-none">
-                  <span className="text-[24px] sm:text-[28px] font-extrabold text-[#1E1035]">{CLINIC_INFO.rating}</span>
-                  <span className="text-[14px] sm:text-[15px] font-semibold text-[#1E1035] mt-1">Google Rating</span>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Hero Image */}

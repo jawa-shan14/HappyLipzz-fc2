@@ -5,13 +5,11 @@ import { CLINIC_INFO } from '../data/dentalData';
 interface HeroSectionProps {
   onOpenAppointment: () => void;
   onExploreServices: () => void;
-  onOpenReviews: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenAppointment,
   onExploreServices,
-  onOpenReviews,
 }) => {
   return (
     <section
@@ -72,39 +70,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Social Proof Badges */}
-            <div className="pt-2 flex flex-wrap items-center gap-4 text-sm">
-              <button
-                id="hero-rating-badge"
-                onClick={onOpenReviews}
-                className="flex items-center gap-2.5 px-3.5 py-2 rounded-2xl bg-white/90 border border-purple-100/80 shadow-2xs hover:border-purple-300 transition-all text-left group cursor-pointer"
-              >
-                <div className="flex items-center text-[#F59E0B] font-extrabold text-base">
-                  <Star className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B] mr-1" />
-                  <span className="text-[#1E1035]">{CLINIC_INFO.rating}</span>
+            <div className="mt-[2px] flex items-center gap-3 lg:translate-x-[-8px]">
+              <div className="inline-flex items-center gap-2 rounded-2xl bg-white/90 border border-purple-100/80 shadow-sm px-3 py-2 min-h-[58px] translate-y-1">
+                <div className="flex items-center justify-center rounded-full bg-[#F8E7C8] h-8 w-8 shrink-0">
+                  <Star className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
                 </div>
-                <span className="text-[#64748B] group-hover:text-[#6B21A8] transition-colors font-medium text-xs">
-                  Google Rating
-                </span>
-              </button>
-
-              <button
-                id="hero-review-count-badge"
-                onClick={onOpenReviews}
-                className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-white/90 border border-purple-100/80 shadow-2xs hover:border-purple-300 transition-all text-left group cursor-pointer"
-              >
-                <span className="text-[#1E1035] font-extrabold text-base">
-                  {CLINIC_INFO.reviewCount}
-                </span>
-                <span className="text-[#64748B] group-hover:text-[#6B21A8] transition-colors font-medium text-xs">
-                  Google Reviews
-                </span>
-              </button>
+                <div className="flex flex-col leading-none">
+                  <span className="text-[24px] sm:text-[28px] font-extrabold text-[#1E1035]">{CLINIC_INFO.rating}</span>
+                  <span className="text-[14px] sm:text-[15px] font-semibold text-[#1E1035] mt-1">Google Rating</span>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Right Hero Image */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-none">
+            <div className="relative w-full max-w-[360px] sm:max-w-[390px] lg:max-w-[420px] lg:translate-x-[-10px]">
               {/* Violet background halo */}
               <div className="absolute -inset-2 rounded-[36px] bg-gradient-to-tr from-purple-500/20 via-purple-300/10 to-transparent blur-md -z-10"></div>
 

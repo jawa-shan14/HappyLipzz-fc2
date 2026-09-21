@@ -3,13 +3,11 @@ import { CLINIC_INFO } from '../data/dentalData';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
-  onOpenReviews: () => void;
   onSelectRootCanal: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   onNavigate,
-  onOpenReviews,
   onSelectRootCanal,
 }) => {
   return (
@@ -63,15 +61,6 @@ export const Footer: React.FC<FooterProps> = ({
                   className="text-[#475569] hover:text-[#6B21A8] transition-colors cursor-pointer"
                 >
                   Root Canal Treatment in Hebbal
-                </button>
-              </li>
-              <li>
-                <button
-                  id="footer-link-reviews"
-                  onClick={onOpenReviews}
-                  className="text-[#475569] hover:text-[#6B21A8] transition-colors cursor-pointer"
-                >
-                  Patient Reviews
                 </button>
               </li>
               <li>

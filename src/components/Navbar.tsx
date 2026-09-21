@@ -28,7 +28,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAppointment, onNavigate })
     { label: 'About', target: 'about' },
     { label: 'Services', target: 'services' },
     { label: 'Why Choose Us', target: 'why-choose-us' },
-    { label: 'Reviews', target: 'reviews' },
     { label: 'FAQ', target: 'faq' },
     { label: 'Contact', target: 'contact' },
   ];

@@ -6,7 +6,6 @@ import { ServicesSection } from './components/ServicesSection';
 import { WhyChooseUsSection } from './components/WhyChooseUsSection';
 import { AboutSection } from './components/AboutSection';
 import { GallerySection } from './components/GallerySection';
-import { ReviewsSection } from './components/ReviewsSection';
 import { FaqSection } from './components/FaqSection';
 import { ServiceAreasSection } from './components/ServiceAreasSection';
 import { LocationContactSection } from './components/LocationContactSection';
@@ -15,7 +14,6 @@ import { Footer } from './components/Footer';
 import { AppointmentModal } from './components/AppointmentModal';
 import { ServiceDetailModal } from './components/ServiceDetailModal';
 import { AboutModal } from './components/AboutModal';
-import { ReviewsModal } from './components/ReviewsModal';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 import { ServiceItem } from './types';
 import { SERVICES_DATA } from './data/dentalData';
@@ -25,7 +23,6 @@ export default function App() {
   const [selectedServiceForAppointment, setSelectedServiceForAppointment] = useState<string>('root-canal');
   const [detailService, setDetailService] = useState<ServiceItem | null>(null);
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
-  const [reviewsModalOpen, setReviewsModalOpen] = useState(false);
 
   const handleOpenAppointment = (serviceId?: string) => {
     if (serviceId) {
@@ -60,11 +57,10 @@ export default function App() {
         <HeroSection
           onOpenAppointment={() => handleOpenAppointment()}
           onExploreServices={() => handleNavigate('services')}
-          onOpenReviews={() => setReviewsModalOpen(true)}
         />
 
         {/* 2. Stats Bar */}
-        <StatsBar onOpenReviews={() => setReviewsModalOpen(true)} />
+        <StatsBar />
 
         {/* 3. Comprehensive Dental Care Services */}
         <ServicesSection
@@ -81,8 +77,27 @@ export default function App() {
         {/* 5.5 Our Clinic in Action / Before & After */}
         <GallerySection />
 
-        {/* 6. Patient Reviews */}
-        <ReviewsSection onOpenAllReviews={() => setReviewsModalOpen(true)} />
+        <section id="instagram" className="bg-[#FAF5FF] py-16 sm:py-24 border-t border-purple-100/60">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-3 mb-10 sm:mb-14">
+              <span className="text-[#6B21A8] text-xs sm:text-sm font-bold tracking-[0.14em] uppercase">
+                FOLLOW US
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#1E1035] tracking-tight">
+                Instagram
+              </h2>
+            </div>
+
+            <div className="overflow-hidden rounded-[28px] shadow-xl border border-purple-100/80 bg-white">
+              <img
+                src="/insta section.png"
+                alt="HappyLipzz Instagram section"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* 7. Frequently Asked Questions (SEO & Schema) */}
         <FaqSection onOpenAppointment={() => handleOpenAppointment()} />
@@ -102,7 +117,6 @@ export default function App() {
       {/* Footer */}
       <Footer
         onNavigate={handleNavigate}
-        onOpenReviews={() => setReviewsModalOpen(true)}
         onSelectRootCanal={handleSelectRootCanal}
       />
 
@@ -128,11 +142,6 @@ export default function App() {
         onOpenAppointment={() => handleOpenAppointment()}
       />
 
-      <ReviewsModal
-        isOpen={reviewsModalOpen}
-        onClose={() => setReviewsModalOpen(false)}
-        onOpenAppointment={() => handleOpenAppointment()}
-      />
     </div>
   );
 }

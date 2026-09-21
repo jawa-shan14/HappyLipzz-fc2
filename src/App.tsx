@@ -79,7 +79,7 @@ export default function App() {
 
         <section id="instagram" className="bg-[#FAF5FF] py-16 sm:py-24 border-t border-purple-100/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-3 mb-10 sm:mb-14">
+            <div className="text-center space-y-3 mb-8 sm:mb-12">
               <span className="text-[#6B21A8] text-xs sm:text-sm font-bold tracking-[0.14em] uppercase">
                 FOLLOW US
               </span>
@@ -88,13 +88,21 @@ export default function App() {
               </h2>
             </div>
 
-            <div className="overflow-hidden rounded-[28px] shadow-xl border border-purple-100/80 bg-white">
-              <img
-                src="/insta section.png"
-                alt="HappyLipzz Instagram section"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
+            <div className="mx-auto max-w-[820px] lg:max-w-[900px]">
+              <a
+                href="https://www.instagram.com/doctor_isha.s?stkn=bTRyaml6NTNyYmQx"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Follow @doctor_isha.s on Instagram"
+                className="block overflow-hidden rounded-[28px] shadow-xl border border-purple-100/80 bg-white transition-transform duration-200 hover:scale-[1.01]"
+              >
+                <img
+                  src="/insta section.png"
+                  alt="HappyLipzz Instagram section"
+                  className="block w-full h-auto object-contain"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
         </section>
